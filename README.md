@@ -1,7 +1,10 @@
 IMDB Top Movies<a name="TOP"></a>
 ===================
 
-A Python project utilizing the Scrapy framework for crawling the IMDb website, extracting the list and details of the top 250 movies, and storing the extracted data in a JSON, CSV or XML file.
+A Python project utilizing the Scrapy framework for crawling the IMDb website, extracting the list and details of the
+top 250 movies, and storing the extracted data in a JSON, CSV or XML file.
+The extracted data consists of the following information: Movie title, Release year, Rating, Number of votes, Genre,
+Duration, Director, Writer(s), Stars, Movie summary, and IMDb link.
 
 - - - -
 
