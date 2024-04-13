@@ -5,6 +5,8 @@ A Python project utilizing the Scrapy framework for crawling the IMDb website, e
 
 - - - -
 
+![picture alt](https://github.com/mr-mojtaba/imdb-top-movies/blob/main/media/sample.png/1000x800 "Title is optional")
+
 ### Python and package used:
 Name  | Version
 -------- | --------
@@ -17,16 +19,16 @@ Scrapy | 2.11.1
 2- Execute the spider using the command associated with the desired output file format.
 
 For JSON file:
-```
->>> scrapy runspider top_250_movies.py -o top_250_movies.json -t json 
+```sh
+scrapy runspider top_250_movies.py -o top_250_movies.json -t json 
 ```
 
 For CSV file:
-```
->>> scrapy runspider top_250_movies.py -o top_250_movies.scv -t csv 
+```sh
+scrapy runspider top_250_movies.py -o top_250_movies.scv -t csv 
 ```
 
 For XML file:
-```
->>> scrapy runspider top_250_movies.py -o top_250_movies.xml -t xml 
+```sh
+scrapy runspider top_250_movies.py -o top_250_movies.xml -t xml 
 ```
