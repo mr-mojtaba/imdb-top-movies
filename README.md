@@ -8,7 +8,7 @@ Duration, Director, Writer(s), Stars, Movie summary, and IMDb link.
 
 - - - -
 
-## Output example in JSON format.
+## Output example in JSON format:
 ![picture alt](https://github.com/mr-mojtaba/imdb-top-movies/blob/main/media/sample.png/ "imdb-top-250-movies")
 
 ### Python and package used:
