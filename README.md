@@ -5,7 +5,8 @@ A Python project utilizing the Scrapy framework for crawling the IMDb website, e
 
 - - - -
 
-![picture alt](https://github.com/mr-mojtaba/imdb-top-movies/blob/main/media/sample.png "1000x800" "Title is optional")
+## Output example in JSON format.
+![picture alt](https://github.com/mr-mojtaba/imdb-top-movies/blob/main/media/sample.png/ "imdb-top-250-movies")
 
 ### Python and package used:
 Name  | Version
