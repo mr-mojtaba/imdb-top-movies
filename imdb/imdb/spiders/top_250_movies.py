@@ -29,20 +29,48 @@ class Test(scrapy.Spider):
         """
         Extracts information of each movie from its individual page.
         """
-        movie_name = response.css('h1 span::text').extract_first()
+        movie_name = response.css(
+            'h1 span.hero__primary-text::text'
+        ).extract_first()
+
         movie_release = response.css(
-                'ul.ipc-inline-list > li.ipc-inline-list__item > a.ipc-link--baseAlt[href*="releaseinfo"]::text').get()
-        movie_rating = response.css("span.sc-bde20123-1::text").get()
-        movie_vote = response.css("div.sc-bde20123-3::text").get()
-        movie_genre = response.xpath("//div[@class='ipc-chip-list__scroller']//a//text()").getall()
-        movie_duration = response.css('ul.ipc-inline-list > li.ipc-inline-list__item:nth-child(3)::text').get()
-        movie_director = response.css("a.ipc-metadata-list-item__list-content-item::text").get()
+                'a.ipc-link[href*="releaseinfo"]::text'
+        ).get()
+
+        movie_rating = response.css(
+            "span.sc-eb51e184-1::text"
+        ).get()
+
+        movie_vote = response.css(
+            "div.sc-eb51e184-3::text"
+        ).get()
+
+        movie_genre = response.css(
+            "a span.ipc-chip__text::text"
+        ).getall()
+
+        movie_duration = response.css(
+            'li.ipc-inline-list__item:nth-child(3)::text'
+        ).get()
+
+        movie_director = response.css(
+            "a.ipc-metadata-list-item__list-content-item::text"
+        ).get()
+
         movie_writer = set(response.css(
-                'ul.ipc-metadata-list li:nth-child(2).ipc-metadata-list__item > '
-                'div.ipc-metadata-list-item__content-container > ul.ipc-inline-list > li.ipc-inline-list__item > '
-                'a.ipc-metadata-list-item__list-content-item[href*="/name/nm"]::text').getall())
-        movie_stars = set(response.xpath("//a[text()='Stars']/following-sibling::div//a//text()").getall())
-        movie_synopsis = response.css('span.sc-466bb6c-1::text').get()
+            'ul.ipc-metadata-list li:nth-child(2).ipc-metadata-list__item > '
+            'div.ipc-metadata-list-item__content-container > ul.ipc-inline-list > li.ipc-inline-list__item > '
+            'a.ipc-metadata-list-item__list-content-item[href*="/name/nm"]::text'
+        ).getall())
+
+        movie_stars = set(response.xpath(
+            "//a[text()='Stars']/following-sibling::div//a//text()"
+        ).getall())
+
+        movie_synopsis = response.css(
+            'span.sc-2d37a7c7-2::text'
+        ).get()
+
         movie_link = response.url
 
         self.i += 1
